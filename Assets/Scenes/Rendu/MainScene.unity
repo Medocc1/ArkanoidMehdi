@@ -184,7 +184,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 5.0080323
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -250,15 +250,34 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: 9.690443, y: 5.0044155}
-  - {x: 9.669141, y: -4.9972415}
-  - {x: -9.6987505, y: -5.013221}
-  - {x: -9.6562195, y: 5.002039}
-  - {x: 9.648865, y: 4.990289}
+  - {x: 8.815792, y: 4.976201}
+  - {x: 8.808596, y: -4.9831343}
+  - {x: -1.2960132, y: -4.9842086}
+  - {x: -2.6079443, y: -4.984348}
+  - {x: -8.795885, y: -4.985006}
+  - {x: -8.781568, y: 5.002039}
+  - {x: 8.788321, y: 4.990289}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!1 &677158678 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5939835238673995218, guid: b73337fe5f67b4c4ca014de03818dfbf, type: 3}
+  m_PrefabInstance: {fileID: 2040593672026733362}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &677158683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 677158678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e6b6a766735d5d409eac06d853f90b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1673430146 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6241808554158186351, guid: 3adbf2a5a7cef9c44abc7351e2e32e3d, type: 3}
@@ -344,12 +363,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5595544484579161842, guid: 3adbf2a5a7cef9c44abc7351e2e32e3d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 5595544484579161842, guid: 3adbf2a5a7cef9c44abc7351e2e32e3d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.36030704
+      objectReference: {fileID: 0}
+    - target: {fileID: 5595544484579161842, guid: 3adbf2a5a7cef9c44abc7351e2e32e3d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.47754413
+      objectReference: {fileID: 0}
+    - target: {fileID: 5595544484579161842, guid: 3adbf2a5a7cef9c44abc7351e2e32e3d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.13
+      value: 0.64
       objectReference: {fileID: 0}
     - target: {fileID: 5595544484579161842, guid: 3adbf2a5a7cef9c44abc7351e2e32e3d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.16
+      value: -4.76
       objectReference: {fileID: 0}
     - target: {fileID: 5595544484579161842, guid: 3adbf2a5a7cef9c44abc7351e2e32e3d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -383,6 +414,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5595544484579161842, guid: 3adbf2a5a7cef9c44abc7351e2e32e3d, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6241808554158186351, guid: 3adbf2a5a7cef9c44abc7351e2e32e3d, type: 3}
       propertyPath: m_Name
       value: Square
@@ -408,7 +443,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2359071733497136040, guid: b73337fe5f67b4c4ca014de03818dfbf, type: 3}
       propertyPath: m_GravityScale
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4641806546114406625, guid: b73337fe5f67b4c4ca014de03818dfbf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -457,7 +492,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5939835238673995218, guid: b73337fe5f67b4c4ca014de03818dfbf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 677158683}
   m_SourcePrefab: {fileID: 100100000, guid: b73337fe5f67b4c4ca014de03818dfbf, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

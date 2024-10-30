@@ -6,22 +6,41 @@ using UnityEngine;
 public class BallScript : MonoBehaviour
 {
     private Rigidbody2D rb;
+    [SerializeField] private float MaxSpeed;
+    private Vector2 newVelocity;
+    private Rigidbody2D colliderRb;
+    [SerializeField] private float ballSpeed;
     // Start is called before the first frame update
     void Start()
     {
-      rb = GetComponent<Rigidbody2D>();
-        rb.AddForce(Vector2.one*4, ForceMode2D.Impulse);
+        rb = GetComponent<Rigidbody2D>();
+        newVelocity = Vector2.one * 4;
     }
-
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        rb.MovePosition(transform.position + (Vector3)newVelocity * Time.fixedDeltaTime*ballSpeed);
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Vector2 inDirection = GetComponent<Rigidbody2D>().velocity;
+        Vector2 inDirection = newVelocity;
         Vector2 inNormal = collision.contacts[0].normal;
-        Vector2 newVelocity = Vector2.Reflect(inDirection, inNormal);
+        newVelocity = Vector2.Reflect(inDirection, inNormal);
+        newVelocity.Normalize();
+        newVelocity *= 4;
+        if (collision.rigidbody != null)
+        {
+            colliderRb = collision.rigidbody;
+            newVelocity += colliderRb.velocity * 10;
+            ballSpeed += 0.1f;
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.name == "DeadZone")
+        {
+            Destroy(this.gameObject);
+        }
+
     }
 }

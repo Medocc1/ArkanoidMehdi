@@ -9,7 +9,7 @@ public class BallScript : MonoBehaviour
     [SerializeField] private float MaxSpeed;
     private Vector2 newVelocity;
     private Rigidbody2D colliderRb;
-    [SerializeField] private float ballSpeed;
+    public float ballSpeed;
     // Start is called before the first frame update
     void Start()
     {

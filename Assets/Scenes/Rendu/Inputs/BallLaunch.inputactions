@@ -1,0 +1,34 @@
+{
+    "name": "BallLaunch",
+    "maps": [
+        {
+            "name": "Launch",
+            "id": "fc3ced70-e347-4f03-b6ae-0bb5bcec2931",
+            "actions": [
+                {
+                    "name": "Launch",
+                    "type": "Button",
+                    "id": "76a0da79-d95f-4ffb-9300-570bd7cb6b3c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "92d1d138-0c98-48b5-87f1-1e89d6957374",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Launch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

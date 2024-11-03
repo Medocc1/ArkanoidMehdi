@@ -72,6 +72,34 @@
                     "isPartOfComposite": true
                 }
             ]
+        },
+        {
+            "name": "BallActionMap",
+            "id": "d9763660-971d-443f-80a9-e3848cd71a79",
+            "actions": [
+                {
+                    "name": "Launch",
+                    "type": "Button",
+                    "id": "3645142b-27de-4525-a7c9-55fa6231ea57",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "81bb98dd-575f-48e5-a0fd-cc361b07ab34",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Launch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []

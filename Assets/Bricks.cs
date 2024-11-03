@@ -12,11 +12,12 @@ public class Bricks : MonoBehaviour
     private int hp;
     private Renderer rd;
     private Vector3 spawnBonus;
-
+    public int brickScore;
+    public GameObject ScoreManager;
     void Start()
     {
         hp = Random.Range(1, 4);
-        Debug.Log(hp);
+        brickScore = 200 * hp;
         rd = this.gameObject.GetComponent<Renderer>();
         if (hp == 3)
         {
@@ -28,6 +29,7 @@ public class Bricks : MonoBehaviour
         }
         spawnBonus = transform.position;
         drop = Random.Range(1, 11);
+        Debug.Log(hp);
     }
     void Update()
     {
@@ -35,7 +37,7 @@ public class Bricks : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.name == "Ball")
+        if (collision.gameObject.layer == 6)
         {
             hp -= 1;
             if (hp == 0)
@@ -51,6 +53,7 @@ public class Bricks : MonoBehaviour
                         Instantiate(bonusToDropRed, spawnBonus, Quaternion.identity);
                     }
                 }
+                ScoreManager.GetComponent<ScoreManager>().score += brickScore;
                 Destroy(this.gameObject);
             }
         }

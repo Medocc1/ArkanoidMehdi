@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class BallScript : MonoBehaviour
 {
@@ -10,16 +11,18 @@ public class BallScript : MonoBehaviour
     private Vector2 newVelocity;
     private Rigidbody2D colliderRb;
     public float ballSpeed;
+    public bool firstMove;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        firstMove = true;
         newVelocity = Vector2.one * 4;
     }
     // Update is called once per frame
     void FixedUpdate()
     {
-        rb.MovePosition(transform.position + (Vector3)newVelocity * Time.fixedDeltaTime*ballSpeed);
+        rb.MovePosition(transform.position + (Vector3)newVelocity * Time.fixedDeltaTime * ballSpeed);
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -39,8 +42,9 @@ public class BallScript : MonoBehaviour
     {
         if (collision.name == "DeadZone")
         {
+            collision.GetComponent<LifesManager>().playerLifes -= 1;
+
             Destroy(this.gameObject);
         }
-
     }
 }

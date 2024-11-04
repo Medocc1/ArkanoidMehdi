@@ -12,6 +12,7 @@ public class BallScript : MonoBehaviour
     private Rigidbody2D colliderRb;
     public float ballSpeed;
     public bool firstMove;
+    public GameObject GameManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -42,7 +43,7 @@ public class BallScript : MonoBehaviour
     {
         if (collision.name == "DeadZone")
         {
-            collision.GetComponent<LifesManager>().playerLifes -= 1;
+            collision.GetComponent<GameManager>().playerLifes -= 1;
 
             Destroy(this.gameObject);
         }

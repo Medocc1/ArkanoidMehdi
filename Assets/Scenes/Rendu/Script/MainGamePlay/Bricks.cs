@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class Bricks : MonoBehaviour
@@ -9,7 +8,7 @@ public class Bricks : MonoBehaviour
     [SerializeField] private GameObject bonusToDropBlue;
     [SerializeField] private int dropRate;
     private int drop;
-    private int hp;
+    public int hp;
     private Renderer rd;
     private Vector3 spawnBonus;
     public int brickScore;
@@ -53,7 +52,7 @@ public class Bricks : MonoBehaviour
                         Instantiate(bonusToDropRed, spawnBonus, Quaternion.identity);
                     }
                 }
-                ScoreManager.GetComponent<ScoreManager>().score += brickScore;
+                ScoreManager.GetComponent<GameManager>().score += brickScore;
                 Destroy(this.gameObject);
             }
         }

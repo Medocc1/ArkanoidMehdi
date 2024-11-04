@@ -161,3 +161,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22bdada30c732d445b0919da54f85df2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BrickList: {fileID: 5705079792852174108, guid: 33c8bbf7a33670443b5be8cd28e10879, type: 3}

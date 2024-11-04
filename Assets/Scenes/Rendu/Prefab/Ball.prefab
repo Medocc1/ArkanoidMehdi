@@ -165,6 +165,7 @@ MonoBehaviour:
   MaxSpeed: 0
   ballSpeed: 1
   firstMove: 1
+  GameManager: {fileID: 8033679584806742223, guid: c059942ffcd76c24eb63e3d263af2d9a, type: 3}
 --- !u!114 &-4207067752066820498
 MonoBehaviour:
   m_ObjectHideFlags: 0

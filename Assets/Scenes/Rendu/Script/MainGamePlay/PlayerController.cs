@@ -1,10 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.WSA;
 
 public class PlayerController : MonoBehaviour
 {
@@ -27,6 +25,7 @@ public class PlayerController : MonoBehaviour
         if (localBall == null)
         {
             localBall = Instantiate(Ball, transform.position + Vector3.up, Quaternion.identity);
+            localBall.name = Ball.name;
         }
     }
 }

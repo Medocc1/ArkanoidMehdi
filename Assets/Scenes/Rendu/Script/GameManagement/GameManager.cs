@@ -7,40 +7,36 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public int playerLifes;
-    public TMP_Text lifePrompt;
-    public GameObject brickManager;
-    public int score;
-    public TMP_Text scorePrompt;
-    private Transform[] children;
+    public int PlayerLifes;
+    public TMP_Text LifePrompt;
+    public GameObject BrickManager;
+    public int Score;
+    public TMP_Text ScorePrompt;
     // Start is called before the first frame update
     void Start()
     {
-        if (brickManager != null)
-        {
-            children = brickManager.GetComponentsInChildren<Transform>();
-        }
         DontDestroyOnLoad(this.gameObject);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (playerLifes == 0)
+        Debug.Log(BrickManager.transform.childCount);
+        if (PlayerLifes == 0)
         {
             SceneManager.LoadScene(2);
         }
-        if (lifePrompt != null)
+        if (LifePrompt != null)
         {
-        lifePrompt.text = $"Player lifes {playerLifes}";
+        LifePrompt.text = $"Player lifes {PlayerLifes}";
         }
-        if (scorePrompt != null)
+        if (ScorePrompt != null)
         {
-            scorePrompt.text = $"Score: {score}";
+            ScorePrompt.text = $"Score: {Score}";
         }
-        if (children != null)
+        if (BrickManager != null)
         {
-            if (children.Length == 1)
+            if (BrickManager.transform.childCount == 0)
             {
                 SceneManager.LoadScene(2);
             }

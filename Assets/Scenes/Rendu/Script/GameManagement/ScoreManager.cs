@@ -7,16 +7,16 @@ using UnityEngine.SceneManagement;
 
 public class ScoreManager : MonoBehaviour
 {
-    public GameObject brickManager;
-    public int score;
-    public TMP_Text scorePrompt;
+    public GameObject BrickManager;
+    public int Score;
+    public TMP_Text ScorePrompt;
     private Transform[] children;
     // Start is called before the first frame update
     void Start()
     {
-        if (brickManager != null)
+        if (BrickManager != null)
         {
-            children = brickManager.GetComponentsInChildren<Transform>();
+            children = BrickManager.GetComponentsInChildren<Transform>();
         }
         DontDestroyOnLoad(this.gameObject);
     }
@@ -24,7 +24,7 @@ public class ScoreManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        scorePrompt.text = $"Score: {score}";
+        ScorePrompt.text = $"Score: {Score}";
         if (children != null)
         {
             if (children.Length == 1)

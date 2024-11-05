@@ -11,7 +11,7 @@ public class ScoreFinal : MonoBehaviour
     void Start()
     {
         scoreStocker = GameObject.Find("DeadZone");
-        scorePrompt.text = $"Score : {scoreStocker.GetComponent<GameManager>().score}";
+        scorePrompt.text = $"Score : {scoreStocker.GetComponent<GameManager>().Score}";
     }
 
     // Update is called once per frame

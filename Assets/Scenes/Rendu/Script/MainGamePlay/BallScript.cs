@@ -10,20 +10,20 @@ public class BallScript : MonoBehaviour
     [SerializeField] private float MaxSpeed;
     private Vector2 newVelocity;
     private Rigidbody2D colliderRb;
-    public float ballSpeed;
-    public bool firstMove;
+    public float BallSpeed;
+    public bool FirstMove;
     public GameObject GameManager;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        firstMove = true;
+        FirstMove = true;
         newVelocity = Vector2.one * 4;
     }
     // Update is called once per frame
     void FixedUpdate()
     {
-        rb.MovePosition(transform.position + (Vector3)newVelocity * Time.fixedDeltaTime * ballSpeed);
+        rb.MovePosition(transform.position + (Vector3)newVelocity * Time.fixedDeltaTime * BallSpeed);
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -36,14 +36,14 @@ public class BallScript : MonoBehaviour
         {
             colliderRb = collision.rigidbody;
             newVelocity += colliderRb.velocity * 10;
-            ballSpeed += 0.1f;
+            BallSpeed += 0.1f;
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.name == "DeadZone")
         {
-            collision.GetComponent<GameManager>().playerLifes -= 1;
+            collision.GetComponent<GameManager>().PlayerLifes -= 1;
 
             Destroy(this.gameObject);
         }

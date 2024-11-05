@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 direction = Vector2.zero;
     Rigidbody2D rb;
     [SerializeField] private float speed;
-    public GameObject localBall;
+    public GameObject LocalBall;
     [SerializeField] private GameObject Ball;
     void Start()
     {
@@ -22,10 +22,10 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         rb.MovePosition(transform.position + (Vector3)direction * Time.fixedDeltaTime * speed);
-        if (localBall == null)
+        if (LocalBall == null)
         {
-            localBall = Instantiate(Ball, transform.position + Vector3.up, Quaternion.identity);
-            localBall.name = Ball.name;
+            LocalBall = Instantiate(Ball, transform.position + Vector3.up, Quaternion.identity);
+            LocalBall.name = Ball.name;
         }
     }
 }

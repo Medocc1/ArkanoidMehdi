@@ -21,7 +21,7 @@ public class Slower : MonoBehaviour
         if (collision.gameObject.layer == 3)
         {
             Ball = GameObject.Find("Ball");
-            Ball.GetComponent<BallScript>().ballSpeed *= 0.5f;
+            Ball.GetComponent<BallScript>().BallSpeed *= 0.5f;
             Destroy(this.gameObject);
         }
         if (collision.gameObject.name == "DeadZone")

@@ -172,7 +172,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5fad413b25336040b159aadd51bc4f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 12
+  LocalBall: {fileID: 0}
+  Ball: {fileID: 5939835238673995218, guid: b73337fe5f67b4c4ca014de03818dfbf, type: 3}
 --- !u!114 &-3294946975246905107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,6 +216,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 3549a915-755c-4576-b46e-8b90b47426f2
     m_ActionName: BaseActionMap/Movements[/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3645142b-27de-4525-a7c9-55fa6231ea57
+    m_ActionName: BallActionMap/Launch[/Keyboard/enter]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: BaseActionMap

@@ -52,7 +52,7 @@ public class Bricks : MonoBehaviour
                         Instantiate(bonusToDropRed, spawnBonus, Quaternion.identity);
                     }
                 }
-                ScoreManager.GetComponent<GameManager>().score += brickScore;
+                ScoreManager.GetComponent<GameManager>().Score += brickScore;
                 Destroy(this.gameObject);
             }
         }

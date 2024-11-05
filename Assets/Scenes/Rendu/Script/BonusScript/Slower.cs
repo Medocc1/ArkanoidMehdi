@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Faster : MonoBehaviour
+public class Slower : MonoBehaviour
 {
     private GameObject Ball;
     // Start is called before the first frame update
@@ -21,7 +21,7 @@ public class Faster : MonoBehaviour
         if (collision.gameObject.layer == 3)
         {
             Ball = GameObject.Find("Ball");
-            Ball.GetComponent<BallScript>().ballSpeed *= 1.5f;
+            Ball.GetComponent<BallScript>().ballSpeed *= 0.5f;
             Destroy(this.gameObject);
         }
         if (collision.gameObject.name == "DeadZone")
